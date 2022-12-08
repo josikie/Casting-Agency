@@ -226,7 +226,8 @@ def create_app(test_config=None):
         actors = movie.actors
         formattedActor = [actor.format() for actor in actors]
         return jsonify({
-            'id': id,
+            'movieId': id,
+            'movieTitle': movie.title,
             'movieActors': formattedActor,
             'totalOfMovieActors': len(formattedActor),
             'status_code': 200,
@@ -246,6 +247,7 @@ def create_app(test_config=None):
         formattedMovies = [movie.format() for movie in movies]
         return jsonify({
             'id': id,
+            'actorName': actor.name,
             'actorMovies': formattedMovies,
             'totalOfActorMovies': len(movies),
             'status_code': 200,
