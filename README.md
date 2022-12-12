@@ -158,18 +158,18 @@ GET `http://localhost:5000/`
 - return a json object contains message,
 - you can access it through website without providing credentials
 Try in curl:
-curl http://localhost:5000/
+curl `http://localhost:5000/`
 result example:
 {
     "message": "Welcome, dear! Please login first to use our resources"
 }
 
-GET http://localhost:5000/movies
+GET `http://localhost:5000/movies`
 - Fetch Movies
 - need Authorization (Bearer token) in headers
 - return json object contains list of available movies
 Try in curl:
-curl http://localhost:5000/movies -H 'Authorization: Bearer {token}'
+curl `http://localhost:5000/movies` -H 'Authorization: Bearer {token}'
 
 result example:
 ```json
@@ -191,12 +191,12 @@ result example:
     }
 ```
 
-GET http://localhost:5000/actors
+GET `http://localhost:5000/actors`
 - Fetch Actors
 - need Authorization (Bearer token) in headers
 - return json object contains list of available actors
 Try in curl:
-curl http://localhost:5000/actors -H 'Authorization: Bearer {token}'
+curl `http://localhost:5000/actors` -H 'Authorization: Bearer {token}'
 
 result example:
 ```json
@@ -220,12 +220,12 @@ result example:
     }
 ```
 
-GET http://localhost:5000/movie-items/movies/{id}
+GET `http://localhost:5000/movie-items/movies/{id}`
 - Fetch movie's actors
 - need Authorization (Bearer token) in headers
 - return json object contains list of available movie's actors
 Try in curl:
- curl http://localhost:5000/movie-items/movies/1 -H 'Authorization: Bearer {token}'
+ curl `http://localhost:5000/movie-items/movies/1` -H 'Authorization: Bearer {token}'
 
 result example:
 ```json
@@ -246,12 +246,12 @@ result example:
     }
 ```
 
-GET http://localhost:5000/movie-items/actors/{id}
+GET `http://localhost:5000/movie-items/actors/{id}`
 - Fetch actor's movies
 - need Authorization (Bearer token) in headers
 - return json object contains list of available actor's movies
 Try in curl:
-curl http://localhost:5000/movie-items/actors/1 -H 'Authorization: Bearer {token}'
+curl `http://localhost:5000/movie-items/actors/1` -H 'Authorization: Bearer {token}'
 
 result example:
 ```json
@@ -271,13 +271,13 @@ result example:
     }
 ```
 
-POST http://localhost:5000/movies
+POST `http://localhost:5000/movies`
 - Create new movie
 - need Authorization (Bearer token) in headers
 - need new movie's data in headers
 - return json object contains data from created movies
 Try in curl:
-curl -X POST http://localhost:5000/movies -H 'Content-Type: application/json' -H 'Authorization: Bearer {token}' --data '{"title":"Frozen 1", "release_date":"2015"}'
+curl -X POST `http://localhost:5000/movies` -H 'Content-Type: application/json' -H 'Authorization: Bearer {token}' --data '{"title":"Frozen 1", "release_date":"2015"}'
 
 return example:
 ```json
@@ -290,13 +290,13 @@ return example:
     }
 ```
 
-PATCH http://localhost:5000/movies/{id}
+PATCH `http://localhost:5000/movies/{id}`
 - Update existing movie
 - need Authorization (Bearer token) in headers
 - need movie's data in headers
 - return json object contains list updated movie
 Try in curl:
-curl -X PATCH http://localhost:5000/movies/7 -H 'Content-Type: application/json' -H 'Authorization: Bearer {token}' --data '{"release_date":"12-23-2013"}'
+curl -X PATCH `http://localhost:5000/movies/7` -H 'Content-Type: application/json' -H 'Authorization: Bearer {token}' --data '{"release_date":"12-23-2013"}'
 
 return example:
 ```json
@@ -309,13 +309,13 @@ return example:
     }
 ```
 
-DELETE http://localhost:5000/movies/7
+DELETE `http://localhost:5000/movies/7`
 - Delete existing movie
 - need Authorization (Bearer token) in headers
 - need movie's data in headers
 - return json object contains deleted movie
 Try in curl:
-curl -X DELETE http://localhost:5000/movies/7 -H 'Authorization: Bearer {token}'
+curl -X DELETE `http://localhost:5000/movies/7` -H 'Authorization: Bearer {token}'
 
 return example:
 ```json
@@ -327,13 +327,13 @@ return example:
     }
 ```
 
-POST http://localhost:5000/actors
+POST `http://localhost:5000/actors`
 - Create new actor
 - need Authorization (Bearer token) in headers
 - need actor's data in headers
 - return json object contains created actor
 Try in curl:
-curl -X POST http://localhost:5000/actors -H 'Content-Type: application/json' -H 'Authorization: Bearer {token}' --data '{"name":"Taylor Swift", "age":32, "gender":"female"}'
+curl -X POST `http://localhost:5000/actors` -H 'Content-Type: application/json' -H 'Authorization: Bearer {token}' --data '{"name":"Taylor Swift", "age":32, "gender":"female"}'
 
 return example:
 ```json
@@ -345,13 +345,13 @@ return example:
     }
 ```
 
-PATCH http://localhost:5000/actors/{id}
+PATCH `http://localhost:5000/actors/{id}`
 - Update existing actor
 - need Authorization (Bearer token) in headers
 - need actor's data in headers
 - return json object contains updated actor
 Try in curl:
-curl -X PATCH http://localhost:5000/actors/6 -H 'Content-Type: application/json' -H 'Authorization: Bearer {token}' --data '{"gender":""}'
+curl -X PATCH `http://localhost:5000/actors/6` -H 'Content-Type: application/json' -H 'Authorization: Bearer {token}' --data '{"gender":""}'
 
 result example:
 ```json
@@ -363,13 +363,13 @@ result example:
     }
 ```
 
-DELETE http://localhost:5000/actors/{id}
+DELETE `http://localhost:5000/actors/{id}`
 - delete existing actor
 - need Authorization (Bearer token) in headers
 - need actor's data in headers
 - return json object contains deleted actor
 Try in curl:
-curl -X DELETE http://localhost:5000/actors/7 -H 'Authorization: Bearer {token}'
+curl -X DELETE `http://localhost:5000/actors/7` -H 'Authorization: Bearer {token}'
 
 return example:
 ```json
@@ -381,13 +381,13 @@ return example:
     }
 ```
 
-POST http://localhost:5000/movie-items
+POST `http://localhost:5000/movie-items`
 - create new data in the third table
 - need Authorization (Bearer token) in headers
 - need movie id and actor id in headers
 - return json object contains movie and actor data
 Try in curl:
-curl -X POST http://localhost:5000/movie-items -H 'Content-Type: application/json' -H 'Authorization: Bearer {token}' --data '{"movie_id":1, "actor_id":1}'
+curl -X POST `http://localhost:5000/movie-items` -H 'Content-Type: application/json' -H 'Authorization: Bearer {token}' --data '{"movie_id":1, "actor_id":1}'
 
 result example:
 ```json
@@ -401,12 +401,12 @@ result example:
     }
 ```
 
-DELETE http://localhost:5000/movie-items/actors
+DELETE `http://localhost:5000/movie-items/actors`
 - delete an actor's movie
 - need Authorization (Bearer token) in headers
 - need movie id and actor id in headers
 - return json object contains movie and actor data
-curl -X DELETE http://localhost:5000/movie-items/actors -H 'Content-Type: application/json' -H 'Authorization: Bearer {token}' --data '{"movie_id":1, "actor_id":1}'
+curl -X DELETE `http://localhost:5000/movie-items/actors` -H 'Content-Type: application/json' -H 'Authorization: Bearer {token}' --data '{"movie_id":1, "actor_id":1}'
 
 result example:
 ```json
@@ -426,13 +426,13 @@ result example:
     }
 ```
 
-DELETE http://localhost:5000/movie-items/movies
+DELETE `http://localhost:5000/movie-items/movies`
 - delete a movie's actor
 - need Authorization (Bearer token) in headers
 - need movie id and actor id in headers
 - return json object contains movie and actor data
 Try in curl:
-curl -X DELETE http://localhost:5000/movie-items/actors -H 'Content-Type: application/json' -H 'Authorization: Bearer {token}' --data '{"movie_id":2, "actor_id":2}'
+curl -X DELETE `http://localhost:5000/movie-items/actors` -H 'Content-Type: application/json' -H 'Authorization: Bearer {token}' --data '{"movie_id":2, "actor_id":2}'
 
 result example:
 ```json
