@@ -89,6 +89,7 @@ A back end application contains API for Casting Agency. It is used to help manag
 ### Endpoints ###
 
 Endpoints that casting assistant can access
+
     1. GET /movies = get:movies,
 
     2. GET /actors  =  get:actors,
@@ -99,6 +100,7 @@ Endpoints that casting assistant can access
 
 
 Endpoints that casting director can access
+
     1. GET /movies  = get:movies,
 
     2. PATCH /movies/<int:id> = patch:movies,
@@ -119,6 +121,7 @@ Endpoints that casting director can access
 
 
 Endpoints that executive producer can access
+
     1. GET /movies  = get:movies,
 
     2. DELETE /movies/<int:id> = delete:movies,
@@ -144,7 +147,7 @@ Endpoints that executive producer can access
     12.DELETE /movie-items/movies/<int:id> = delete:movie-items/movies,
 
     13.DELETE /movie-items/actors/<int:id> = delete:movie-items/actors
-    
+
 
 ### API Resources ###
 
