@@ -89,36 +89,62 @@ A back end application contains API for Casting Agency. It is used to help manag
 ### Endpoints ###
 
 Endpoints that casting assistant can access
-    - GET /movies = get:movies
-    - GET /actors  =  get:actors
-    - GET /movie-items/movies/<int:id>  = get:movie-items/movies
-    - GET /movie-items/actors/<int:id> = get:movie-items/actors
+    1. GET /movies = get:movies,
+
+    2. GET /actors  =  get:actors,
+
+    3. GET /movie-items/movies/<int:id>  = get:movie-items/movies,
+
+    4. GET /movie-items/actors/<int:id> = get:movie-items/actors,
+
 
 Endpoints that casting director can access
-    - GET /movies  = get:movies
-    - PATCH /movies/<int:id> = patch:movies
-    - GET /actors =  get:actors
-    - DELETE /actors/<int:id> = delete:actors
-    - POST /actors = post:actors
-    - PATCH /actors<int:id> = patch:actors
-    - GET /movie-items/movies/<int:id> = get:movie-items/movies
-    - GET /movie-items/actors/<int:id> = get:movie-items/actors
-    - DELETE /movie-items/actors = delete:movie-items/actors
+    1. GET /movies  = get:movies,
+
+    2. PATCH /movies/<int:id> = patch:movies,
+
+    3. GET /actors =  get:actors,
+
+    4. DELETE /actors/<int:id> = delete:actors,
+
+    5. POST /actors = post:actors,
+
+    6. PATCH /actors<int:id> = patch:actors,
+
+    7. GET /movie-items/movies/<int:id> = get:movie-items/movies,
+
+    8. GET /movie-items/actors/<int:id> = get:movie-items/actors,
+
+    9. DELETE /movie-items/actors = delete:movie-items/actors
+
 
 Endpoints that executive producer can access
-    - GET /movies  = get:movies
-    - DELETE /movies/<int:id> = delete:movies
-    - POST /movies = post:movies
-    - PATCH /movies/<int:id> = patch:movies
-    - GET /actors =  get:actors
-    - DELETE /actors/<int:id> = delete:actors
-    - POST /actors = post:actors
-    - PATCH /actors<int:id> = patch:actors
-    - GET /movie-items/movies/<int:id> = get:movie-items/movies
-    - GET /movie-items/actors/<int:id> = get:movie-items/actors
-    - POST /movie-items = post:movie-items
-    - DELETE /movie-items/movies/<int:id> = delete:movie-items/movies
-    - DELETE /movie-items/actors/<int:id> = delete:movie-items/actors
+    1. GET /movies  = get:movies,
+
+    2. DELETE /movies/<int:id> = delete:movies,
+
+    3. POST /movies = post:movies,
+
+    4. PATCH /movies/<int:id> = patch:movies,
+
+    5. GET /actors =  get:actors,
+
+    6. DELETE /actors/<int:id> = delete:actors,
+
+    7. POST /actors = post:actors,
+
+    8. PATCH /actors<int:id> = patch:actors,
+
+    9. GET /movie-items/movies/<int:id> = get:movie-items/movies,
+
+    10.GET /movie-items/actors/<int:id> = get:movie-items/actors,
+
+    11.POST /movie-items = post:movie-items,
+
+    12.DELETE /movie-items/movies/<int:id> = delete:movie-items/movies,
+
+    13.DELETE /movie-items/actors/<int:id> = delete:movie-items/actors
+    
 
 ### API Resources ###
 
