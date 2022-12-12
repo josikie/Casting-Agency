@@ -11,15 +11,6 @@ def create_app(test_config=None):
     setup_db(app)
     CORS(app)
 
-
-    @app.route('/dashboard', methods=['GET'])
-    @requires_auth('get:dashboard')
-    def dashboard(jwt):
-        return jsonify({
-            'token': get_token_auth_header(),
-            'status_code': 200
-        })
-
     @app.route('/', methods=['GET'])
     def welcome():
         return jsonify({

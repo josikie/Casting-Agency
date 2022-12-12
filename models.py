@@ -16,7 +16,9 @@ def setup_db(app, database_path=database_path):
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
     db.app = app
     db.init_app(app)
-    migrate = Migrate(app, db)
+    #migrate = Migrate(app, db)
+    with app.app_context():
+        db.create_all()
 
 # third table
 movie_items = db.Table('movie_items',
