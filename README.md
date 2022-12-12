@@ -1,7 +1,7 @@
-** Casting Agency API **
+## Casting Agency API ##
 A back end application contains API for Casting Agency. It is used to help manage between artists and movies on casting agency. There are 15 endpoints for Movie, Actor, and movie_items. Credentials {token} in setup.sh file for assistant, director, and executive. Note: If there is server error, that means I haven't update the new credentials on setup.sh. I will always generate new credentials so you can try this app.
 
-*** How to run ***
+### How to run ###
 1. Test 
 
     - Install dependencies:
@@ -86,7 +86,7 @@ A back end application contains API for Casting Agency. It is used to help manag
     
     - Access some of API endpoints below (there are example of how to try it on curl).
 
-API RESOURCES:
+### Endpoints ###
 
 Endpoints that casting assistant can access
     - GET /movies = get:movies
@@ -120,7 +120,7 @@ Endpoints that executive producer can access
     - DELETE /movie-items/movies/<int:id> = delete:movie-items/movies
     - DELETE /movie-items/actors/<int:id> = delete:movie-items/actors
 
-Endpoints
+### API Resources ###
 
 GET http://localhost:5000/
     - return a json object contains message
