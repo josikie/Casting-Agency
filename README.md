@@ -154,24 +154,25 @@ Endpoints that executive producer can access
 
 ### API Resources ###
 
-GET http://localhost:5000/
-    - return a json object contains message
-    - you can access it through website without providing credentials
-    Try in curl:
-    curl http://localhost:5000/
-    result example:
-    {
-        "message": "Welcome, dear! Please login first to use our resources"
-    }
+GET `http://localhost:5000/`
+- return a json object contains message,
+- you can access it through website without providing credentials
+Try in curl:
+curl http://localhost:5000/
+result example:
+{
+    "message": "Welcome, dear! Please login first to use our resources"
+}
 
 GET http://localhost:5000/movies
-    - Fetch Movies
-    - need Authorization (Bearer token) in headers
-    - return json object contains list of available movies
-    Try in curl:
-    curl http://localhost:5000/movies -H 'Authorization: Bearer {token}'
-    result example:
-    {
+- Fetch Movies
+- need Authorization (Bearer token) in headers
+- return json object contains list of available movies
+Try in curl:
+curl http://localhost:5000/movies -H 'Authorization: Bearer {token}'
+
+result example:
+    ```{
         "movies": [
             {
                 "id": 1,
@@ -186,7 +187,7 @@ GET http://localhost:5000/movies
         ],
         "status_code": 200,
         "success": true
-    }
+    }```
 
 GET http://localhost:5000/actors
     - Fetch Actors
