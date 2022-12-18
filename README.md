@@ -1,8 +1,8 @@
 ## Casting Agency API ##
-A back end application contains API for Casting Agency. It is used to help manage between artists and movies on casting agency. There are 15 endpoints for Movie, Actor, and movie_items. Credentials {token} in setup.sh file for assistant, director, and executive. Note: If there is server error, that means I haven't update the new credentials on setup.sh. I will always generate new credentials so you can try this app.
+A back end application contains API for Casting Agency. It is used to help manage between artists and movies on casting agency. There are 15 endpoints for Movie, Actor, and movie_items. Credentials {token} in setup.sh file for assistant, director, and executive. Note: If there is server error, that means I haven't update the new credentials on setup.sh. I will always generate new credentials so you can fetch data use curl with assistant, director, or executive credentials.
 
 This project is my capstone project (last project to graduate from Udacity Full Stack Web Developer Nanodegree).
-In the past, this app was online, deployed on heroku, because it is one of the requirements to Capstone Project being passed on Udacity Full Stack Web Developer Nanodegree. Currently, we only can use this app for in local.
+In the past, this app was online, deployed on heroku, because it is one of the requirements to Capstone Project being passed on Udacity Full Stack Web Developer Nanodegree. Currently, only use this app locally.
 
 ### How to run ###
 1. Test 
