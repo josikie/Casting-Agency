@@ -34,21 +34,21 @@ In the past, this app was online, deployed on heroku, because it is one of the r
 	    - 6  | Aquaman 4 |  11-29-2013
 
 	    Table actor (name and gender are string)
-	    id | name           | age    | gender
-	    1  | Jason Momoa    | 43     | Male
-	    2  | Emilia Clarke  | 36     | Female
-	    3  | Idina Menzel   | 51     | Female
-	    4  | Kristen Bell   | 42     | Female
-	    6  | Angelina       | 26     | female
+	    - id | name           | age    | gender
+	    - 1  | Jason Momoa    | 43     | Male
+	    - 2  | Emilia Clarke  | 36     | Female
+	    - 3  | Idina Menzel   | 51     | Female
+	    - 4  | Kristen Bell   | 42     | Female
+	    - 6  | Angelina       | 26     | female
 
 	    Table movie_items
-	    movie_id |  actor_id
-	    1        |   3
-	    2        |   3
-	    1        |   4
-	    2        |   4
-	    3        |   1
-	    3        |   4
+	    - movie_id |  actor_id
+	    - 1        |   3
+	    - 2        |   3
+	    - 1        |   4
+	    - 2        |   4
+	    - 3        |   1
+	    - 3        |   4
 
     - and run the test_app.py :
     `python3 test_app.py`
