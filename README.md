@@ -60,29 +60,29 @@ In the past, this app was online, deployed on heroku, because it is one of the r
     - Go to psql, login, and add this data to postgres locally:
 
 	    Table movie (title and release date are string)
-	    id  title       release_date
-	    1   Frozen      11-29-2013
-	    2   Frozen 2    11-20-2019
-	    3   Aquaman     12-21-2018
-	    4   Aquaman 2   12-25-2023
-	    6   Aquaman 4   11-29-2013
+	    - id | title     |  release_date
+	    - 1  | Frozen    |  11-29-2013
+	    - 2  | Frozen 2  |  11-20-2019
+	    - 3  | Aquaman   |  12-21-2018
+	    - 4  | Aquaman 2 |  12-25-2023
+	    - 6  | Aquaman 4 |  11-29-2013
 
 	    Table actor (name and gender are string)
-	    id  name            age     gender
-	    1   Jason Momoa     43      Male
-	    2   Emilia Clarke   36      Female
-	    3   Idina Menzel    51      Female
-	    4   Kristen Bell    42      Female
-	    6   Angelina        26      female
+	    - id | name          |  age  |   gender
+	    - 1  | Jason Momoa   |  43   |   Male
+	    - 2  | Emilia Clarke |  36   |   Female
+	    - 3  | Idina Menzel  |  51   |   Female
+	    - 4  | Kristen Bell  |  42   |   Female
+	    - 6  | Angelina      |  26   |   female
 
 	    Table movie_items
-	    movie_id   actor_id
-	    1           3
-	    2           3
-	    1           4
-	    2           4
-	    3           1
-	    3           4
+	    - movie_id  | actor_id
+	    - 1         |  3
+	    - 2         |  3
+	    - 1         |  4
+	    - 2         |  4
+	    - 3         |  1
+	    - 3         |  4
 
     - In git bash:
         `flask run`
