@@ -1,8 +1,9 @@
 ## Casting Agency API ##
-A back end application contains API for Casting Agency. It is used to help manage between artists and movies on casting agency. There are 15 endpoints for Movie, Actor, and movie_items. Credentials {token} in setup.sh file for assistant, director, and executive. Note: If there is server error, that means I haven't update the new credentials on setup.sh. I will always generate new credentials so you can fetch data use curl with assistant, director, or executive credentials.
+A back end application contains API for Casting Agency. It is used to help manage between artists and movies on casting agency. There are 15 endpoints for Movie, Actor, and movie_items. 
 
-This project is my capstone project (last project to graduate from Udacity Full Stack Web Developer Nanodegree).
-In the past, this app was online, deployed on heroku, because it is one of the requirements to Capstone Project being passed on Udacity Full Stack Web Developer Nanodegree. Currently, only use this app locally.
+This project is my capstone project (last project to graduate from Udacity Full Stack Web Developer Nanodegree). The application was deployed on Heroku as the requirement for graduating from the nano degree program. Currently, the application could only run locally.
+
+Credentials {token} in setup.sh file for assistant, director, and executive. Note: If there is server error, that means I haven't update the new credentials on setup.sh. I will always generate new credentials so you can fetch data use curl with assistant, director, or executive credentials.
 
 ### How to run ###
 1. Test 
@@ -156,9 +157,14 @@ Endpoints that executive producer can access
 
 GET `http://localhost:5000/`
 - return a json object contains message,
-- you can access it through website without providing credentials
+- you can access it through website without providing credentials.
+
 Try in curl:
+
+``` bash
 curl `http://localhost:5000/`
+```
+
 result example:
 {
     "message": "Welcome, dear! Please login first to use our resources"
@@ -167,9 +173,13 @@ result example:
 GET `http://localhost:5000/movies`
 - Fetch Movies
 - need Authorization (Bearer token) in headers
-- return json object contains list of available movies
+- return json object contains list of available movies.
+
 Try in curl:
+
+``` bash
 curl `http://localhost:5000/movies` -H 'Authorization: Bearer {token}'
+```
 
 result example:
 ```json
@@ -194,9 +204,13 @@ result example:
 GET `http://localhost:5000/actors`
 - Fetch Actors
 - need Authorization (Bearer token) in headers
-- return json object contains list of available actors
+- return json object contains list of available actors.
+
 Try in curl:
+
+``` bash
 curl `http://localhost:5000/actors` -H 'Authorization: Bearer {token}'
+```
 
 result example:
 ```json
@@ -223,9 +237,13 @@ result example:
 GET `http://localhost:5000/movie-items/movies/{id}`
 - Fetch movie's actors
 - need Authorization (Bearer token) in headers
-- return json object contains list of available movie's actors
+- return json object contains list of available movie's actors.
+
 Try in curl:
- curl `http://localhost:5000/movie-items/movies/1` -H 'Authorization: Bearer {token}'
+
+``` bash
+curl `http://localhost:5000/movie-items/movies/1` -H 'Authorization: Bearer {token}'
+```
 
 result example:
 ```json
@@ -249,9 +267,13 @@ result example:
 GET `http://localhost:5000/movie-items/actors/{id}`
 - Fetch actor's movies
 - need Authorization (Bearer token) in headers
-- return json object contains list of available actor's movies
+- return json object contains list of available actor's movies.
+
 Try in curl:
+
+``` bash
 curl `http://localhost:5000/movie-items/actors/1` -H 'Authorization: Bearer {token}'
+```
 
 result example:
 ```json
@@ -275,9 +297,12 @@ POST `http://localhost:5000/movies`
 - Create new movie
 - need Authorization (Bearer token) in headers
 - need new movie's data in headers
-- return json object contains data from created movies
+- return json object contains data from created movies.
+
 Try in curl:
+``` bash
 curl -X POST `http://localhost:5000/movies` -H 'Content-Type: application/json' -H 'Authorization: Bearer {token}' --data '{"title":"Frozen 1", "release_date":"2015"}'
+```
 
 return example:
 ```json
@@ -294,9 +319,13 @@ PATCH `http://localhost:5000/movies/{id}`
 - Update existing movie
 - need Authorization (Bearer token) in headers
 - need movie's data in headers
-- return json object contains list updated movie
+- return json object contains list updated movie.
+
 Try in curl:
+
+``` bash
 curl -X PATCH `http://localhost:5000/movies/7` -H 'Content-Type: application/json' -H 'Authorization: Bearer {token}' --data '{"release_date":"12-23-2013"}'
+```
 
 return example:
 ```json
@@ -313,9 +342,13 @@ DELETE `http://localhost:5000/movies/7`
 - Delete existing movie
 - need Authorization (Bearer token) in headers
 - need movie's data in headers
-- return json object contains deleted movie
+- return json object contains deleted movie.
+
 Try in curl:
+
+``` bash
 curl -X DELETE `http://localhost:5000/movies/7` -H 'Authorization: Bearer {token}'
+```
 
 return example:
 ```json
@@ -331,9 +364,13 @@ POST `http://localhost:5000/actors`
 - Create new actor
 - need Authorization (Bearer token) in headers
 - need actor's data in headers
-- return json object contains created actor
+- return json object contains created actor.
+
 Try in curl:
+
+``` bash
 curl -X POST `http://localhost:5000/actors` -H 'Content-Type: application/json' -H 'Authorization: Bearer {token}' --data '{"name":"Taylor Swift", "age":32, "gender":"female"}'
+```
 
 return example:
 ```json
@@ -349,9 +386,13 @@ PATCH `http://localhost:5000/actors/{id}`
 - Update existing actor
 - need Authorization (Bearer token) in headers
 - need actor's data in headers
-- return json object contains updated actor
+- return json object contains updated actor.
+
 Try in curl:
+
+``` bash
 curl -X PATCH `http://localhost:5000/actors/6` -H 'Content-Type: application/json' -H 'Authorization: Bearer {token}' --data '{"gender":""}'
+```
 
 result example:
 ```json
@@ -367,9 +408,13 @@ DELETE `http://localhost:5000/actors/{id}`
 - delete existing actor
 - need Authorization (Bearer token) in headers
 - need actor's data in headers
-- return json object contains deleted actor
+- return json object contains deleted actor.
+
 Try in curl:
+
+``` bash
 curl -X DELETE `http://localhost:5000/actors/7` -H 'Authorization: Bearer {token}'
+``` 
 
 return example:
 ```json
@@ -385,9 +430,13 @@ POST `http://localhost:5000/movie-items`
 - create new data in the third table
 - need Authorization (Bearer token) in headers
 - need movie id and actor id in headers
-- return json object contains movie and actor data
+- return json object contains movie and actor data.
+
 Try in curl:
+
+``` bash
 curl -X POST `http://localhost:5000/movie-items` -H 'Content-Type: application/json' -H 'Authorization: Bearer {token}' --data '{"movie_id":1, "actor_id":1}'
+```
 
 result example:
 ```json
@@ -405,8 +454,13 @@ DELETE `http://localhost:5000/movie-items/actors`
 - delete an actor's movie
 - need Authorization (Bearer token) in headers
 - need movie id and actor id in headers
-- return json object contains movie and actor data
+- return json object contains movie and actor data.
+
+Try in curl:
+
+``` bash
 curl -X DELETE `http://localhost:5000/movie-items/actors` -H 'Content-Type: application/json' -H 'Authorization: Bearer {token}' --data '{"movie_id":1, "actor_id":1}'
+``` 
 
 result example:
 ```json
@@ -430,9 +484,13 @@ DELETE `http://localhost:5000/movie-items/movies`
 - delete a movie's actor
 - need Authorization (Bearer token) in headers
 - need movie id and actor id in headers
-- return json object contains movie and actor data
+- return json object contains movie and actor data.
+
 Try in curl:
+
+``` bash
 curl -X DELETE `http://localhost:5000/movie-items/actors` -H 'Content-Type: application/json' -H 'Authorization: Bearer {token}' --data '{"movie_id":2, "actor_id":2}'
+```
 
 result example:
 ```json
