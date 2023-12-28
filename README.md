@@ -3,8 +3,7 @@ A back end application contains API for Casting Agency. It is used to help manag
 
 This project is my capstone project (last project to graduate from Udacity Full Stack Web Developer Nanodegree). The application was deployed on Heroku as the requirement for graduating from the nano degree program. Currently, the application could only run locally.
 
-Credentials {token} in setup.sh file for assistant, director, and executive. Note: If there is server error, that means I haven't update the new credentials on setup.sh. I will always generate new credentials so you can fetch data use curl with assistant, director, or executive credentials.
-
+Credentials {token} in setup.sh file for assistant, director, and executive. Note: If there is server error, that means I haven't update the new credentials on setup.sh. 
 ### How to run ###
 1. Test 
 
